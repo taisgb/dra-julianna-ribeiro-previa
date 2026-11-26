@@ -13,3 +13,8 @@ Endereço da Enfance sujeito a confirmação. Projeto O Pediatra na Escola divul
 ## Refinamento da hero
 - Copy reduzido e ornamentos SVG de coração, ramo, girafa e círculo com animações de entrada de até 4,6 s; `prefers-reduced-motion` desativa os movimentos.
 - Teste isolado da hero nas seis larguras de referência, sem overflow ou erros JS; fontes externas e publicação não verificadas.
+
+## Refinamento editorial
+- SVGs fornecidos para girafa, leão e coração. Créditos no rodapé e em THIRD_PARTY_NOTICES.md. Movimento de entrada com reduced motion.
+- Seção Sobre com copy em primeira pessoa, proporção original da foto e legenda sem sobreposição. Texto sujeito à aprovação da profissional.
+- Revisão estática realizada; renderização desta revisão pendente.
