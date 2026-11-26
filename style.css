@@ -26,3 +26,38 @@
 @media(prefers-reduced-motion:reduce){.btn:active,.floating:active,.stage:hover,.project:hover,.unit-card:hover,.process-step:hover,.portrait:hover img,.about-photo:hover img,.stage:hover>svg,.project:hover .project-icon svg,.process-step:hover .project-icon svg{transform:none}.hero-art:hover .hero-heart{transform:rotate(-18deg)}}
 /* Contenção das formas ornamentais, sem alterar a largura das seções. */
 .about{overflow:clip}.about-grid>*,.clinic-grid>*,.faq-grid>*,.process-grid>*{min-width:0}.portrait img{scale:1.018}.project .textlink,.unit-card .textlink{max-width:100%;overflow-wrap:anywhere}
+
+/* Hero — ornamentos da identidade da Dra. Ju; movimento curto, sem alterar o layout. */
+.hero-art{--heart-angle:-18deg;}
+.hero-art .shape-back{background:linear-gradient(150deg,var(--hero-glow),var(--shape) 72%);}
+.hero-art .portrait{box-shadow:0 20px 48px var(--photo-shadow),0 0 0 3px var(--portrait-rim);}
+.hero-heart,.hero-ornament,.portrait-dot{pointer-events:none;}
+.hero-heart{left:-16px;top:5%;z-index:2;}
+.hero-ornament{position:absolute;z-index:2;overflow:visible;stroke-width:1.8;transform-origin:50% 90%;}
+.hero-sprig{right:-22px;top:4%;width:66px;height:92px;color:var(--botanical);transform:rotate(12deg);}
+.hero-giraffe{right:-20px;bottom:0;width:67px;height:96px;color:var(--safari);transform:rotate(8deg);}
+.hero-giraffe .giraffe-fill{fill:var(--safari-fill);}
+.portrait-dot{left:-5px;right:auto;bottom:8%;width:23px;height:23px;z-index:2;}
+.hero h1 span::after{height:5px;clip-path:polygon(0 45%,20% 20%,55% 0,80% 18%,100% 55%,100% 75%,64% 80%,30% 100%,0 80%);}
+@media (prefers-reduced-motion:no-preference){
+ .hero-heart{animation:ju-heart 4.4s var(--ease) 1;}
+ .hero-sprig{animation:ju-sprig 4.6s var(--ease) 1;}
+ .hero-giraffe{animation:ju-giraffe 4.5s var(--ease) 1;}
+ .portrait-dot{animation:ju-dot 4.4s var(--ease) 1;}
+}
+@keyframes ju-heart{0%,100%{transform:translateY(0) rotate(-18deg)}40%{transform:translateY(-9px) rotate(-9deg)}75%{transform:translateY(-3px) rotate(-21deg)}}
+@keyframes ju-sprig{0%,100%{transform:rotate(12deg)}45%{transform:rotate(2deg)}75%{transform:rotate(16deg)}}
+@keyframes ju-giraffe{0%,100%{transform:translateY(0) rotate(8deg)}45%{transform:translateY(-8px) rotate(2deg)}75%{transform:translateY(-3px) rotate(10deg)}}
+@keyframes ju-dot{0%,100%{transform:scale(1)}50%{transform:translateY(-7px) scale(.85)}}
+@media(max-width:760px){.hero-heart{left:0;top:5%}.hero-sprig{right:-5px;top:5%;width:45px;height:64px}.hero-giraffe{right:-5px;bottom:0;width:48px;height:69px}.portrait-dot{left:0;width:17px;height:17px}}
+@media(max-width:480px){.hero-sprig{right:0;width:37px;height:53px}.hero-giraffe{right:0;width:42px;height:60px}.hero-heart{width:36px;height:36px}.portrait-dot{width:14px;height:14px}}
+@media(prefers-reduced-motion:reduce){.hero-heart,.hero-ornament,.portrait-dot{animation:none!important}.hero-art:hover .hero-heart{transform:rotate(-18deg)}}
+
+/* Equilíbrio editorial e leitura da hero. */
+.hero-copy{position:relative;z-index:3}.hero h1{font-size:clamp(3rem,4.65vw,4.85rem);max-width:12ch;line-height:1.04;letter-spacing:-.065em;text-wrap:balance}.hero h1 span{max-width:11ch;color:var(--green)}.hero p{max-width:43ch;line-height:1.6}.hero-art .portrait{isolation:isolate}.hero-art .portrait:after{content:'';position:absolute;inset:auto 0 0;height:14%;background:linear-gradient(transparent,var(--shape));opacity:.20;pointer-events:none}.hero-art .portrait img{scale:1}.hero-sprig,.hero-giraffe{z-index:1}.hero-sprig{right:-28px;top:2%}.hero-giraffe{right:-24px;bottom:0}.hero-credentials{margin-bottom:20px}.hero-features span{font-weight:600}.hero-wave{height:64px}
+@media(max-width:1000px){.hero h1{font-size:clamp(2.6rem,5.2vw,4rem)}}
+@media(max-width:760px){.hero h1{font-size:clamp(2.65rem,9vw,3.7rem);max-width:14ch}.hero-sprig{right:-5px;top:5%}.hero-giraffe{right:-5px;bottom:0}.hero-wave{height:35px}.hero-copy{z-index:auto}}
+@media(max-width:480px){.hero h1{font-size:clamp(2.5rem,10vw,3.3rem);max-width:100%}.hero h1 span{max-width:100%}.hero-sprig,.hero-giraffe{right:0}.hero-features span{font-size:12px}}
+
+.hero-art .portrait img{scale:1.045}
+@media(max-width:760px){.hero-shell:before{top:auto;bottom:70px;opacity:.42}.hero{gap:25px}.hero h1{letter-spacing:-.055em}.hero-art .portrait img{scale:1.045}}
