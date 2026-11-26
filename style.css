@@ -140,3 +140,7 @@ footer .artwork-credit summary::after{content:'+';text-decoration:none;}
 footer .artwork-credit[open] summary::after{content:'−';}
 footer .artwork-credit-content{max-width:75ch;padding:0 0 8px;}
 @media(max-width:760px){footer .artwork-credit{padding-bottom:64px;}}
+
+/* WhatsApp — marca em proporção quadrada, sem contorno adicional. */
+svg:has(> use[href="#wa"]){fill:currentColor;stroke:none;aspect-ratio:1;flex-shrink:0;}
+.floating svg{display:block;width:27px;height:27px;overflow:visible;}
