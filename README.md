@@ -1,13 +1,11 @@
 # Dra. Ju Ribeiro — Prévia não oficial
 
-Site estático HTML/CSS/JS, adaptado das diretrizes Pediatria V13.1 — Editorial Orgânico do repositório taisgb/alexandre-magno-modelo. Estilo reimplementado localmente; não é uma cópia integral do CSS original.
+Pediatria V13.3 — Editorial Orgânico + diretrizes técnicas do Chicote. Refinamento da prévia existente, mantendo estrutura, contatos e fotos. Personalização cromática centralizada em `palette.css`, Allo como fonte principal.
 
-## Publicação
-Envie os arquivos desta pasta à raiz do novo repositório GitHub e habilite Pages na branch main, pasta / (root). Para hospedagem própria, mantenha os caminhos relativos.
+Publicação: GitHub Pages, branch `main`, raiz.
 
-## Revisão
-- Endereço da Enfance divulgado em fontes comerciais; confirmar com a secretária.
-- CRM/RQE, WhatsApp e perfis do Instagram conforme material fornecido. Não foi incluída formação acadêmica ou convênio não confirmado.
-- Fotos fornecidas recortadas sem alteração de rosto/corpo. A foto de atendimento foi recortada para excluir o paciente.
-- Allo, DM Sans e Fraunces são carregadas por CDN; há fontes de fallback. O mapa também exige rede.
-- Testes de layout isolado em Chromium a 360, 390 e 1440 px: sem overflow horizontal, imagens e âncoras válidas, menu mobile e FAQ operantes. Botões >=48 px; espaçamento CTA/selos de 16/18 px. Fontes externas e mapa não testados, devido ao bloqueio de navegação/rede do ambiente. Auditoria completa do Chicote e teste da URL publicada pendentes.
+Endereço da Enfance sujeito a confirmação. Projeto O Pediatra na Escola divulgado como em construção. Sem formação ou convênios não confirmados. Fotografia de atendimento recortada para excluir paciente. A fonte e o mapa dependem de conexão externa.
+
+## Auditoria V13.3
+- Chromium isolado: 360, 390, 768, 1024, 1280 e 1440 px; sem overflow horizontal, sem erros JS, imagens carregadas, âncoras válidas, um H1 e controles principais >=44 px. Menu móvel e FAQ testados.
+- Testes com fontes fallback e recursos externos bloqueados: não validam Allo via CDN, iframe, destinos externos ou desempenho em produção. Auditoria WCAG integral e Chicote automatizado não executados.
